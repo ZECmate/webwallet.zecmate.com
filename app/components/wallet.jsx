@@ -270,8 +270,8 @@ class ZWalletUnlockKey extends React.Component {
                 />
               </Label>
               <FormText color="muted">
-                <span className="import4">For Windows, it should be in</span> %APPDATA%/zelcash<br/>
-                <span className="import5">For Mac/Linux, it should be in</span> ~/.zelcash
+                <span className="import4">For Windows, it should be in</span> %APPDATA%/zcash<br/>
+                <span className="import5">For Mac/Linux, it should be in</span> ~/.zcash
               </FormText>
             </Col>
           </FormGroup>
@@ -329,10 +329,10 @@ class ZWalletUnlockKey extends React.Component {
     else if (this.props.unlockType == UNLOCK_WALLET_TYPE.IMPORT_COPAY){
       return (
         <div>
-          <Alert color="warning"><strong><span className="wallet1">Warning.</span></strong>&nbsp;<span className="wallet2">Only 20 change addresses and 20 receiving addresses are generated with maximum up to 100. If you think your Copay used more, contact Zel team. You can find out specific number of addresses needed in Settings -> specific wallet -> More options -> Wallet addresses. Look for the highest NUMBER in xpub/0/NUMBER or m/0/NUMBER. </span></Alert>
+          <Alert color="warning"><strong><span className="wallet1">Warning.</span></strong>&nbsp;<span className="wallet2">Only 20 change addresses and 20 receiving addresses are generated with maximum up to 100. If you think your Copay used more, contact ZECmate team. You can find out specific number of addresses needed in Settings -> specific wallet -> More options -> Wallet addresses. Look for the highest NUMBER in xpub/0/NUMBER or m/0/NUMBER. </span></Alert>
           {this.state.secretPhraseTooShort ? <Alert color="danger"><strong><span className="import1">Error.</span></strong>&nbsp;<span className="wallet3">Invalid Copay recovery phrase. Recovery phrase shall contain 12 words separated with single space.</span></Alert> : '' }
           <InputGroup>
-          <InputGroupAddon addonType="prepend">Copay recovery phrase</InputGroupAddon>                                     
+          <InputGroupAddon addonType="prepend">Copay recovery phrase BIP 44</InputGroupAddon>                                     
             <Input
               type="text"
               onChange={(e) => this.setState({copayPhrase: e.target.value})}
@@ -361,7 +361,7 @@ class ZWalletSettings extends React.Component {
   render () {
     return (
       <Modal isOpen={this.props.settings.showSettings} toggle={this.props.toggleModalSettings}>
-        <ModalHeader toggle={this.props.toggleShowSettings}><span className="settings1">Zelcash Wallet Settings</span></ModalHeader>                  
+        <ModalHeader toggle={this.props.toggleShowSettings}><span className="settings1">Zcash Wallet Settings</span></ModalHeader>                  
         <ModalBody>
           <ZWalletSelectUnlockType
               setUnlockType={this.props.setUnlockType}
@@ -654,7 +654,7 @@ class ZSendZEL extends React.Component {
     const satoshisToSend = Math.round(value * 100000000)
     const satoshisfeesToSend = Math.round(fee * 100000000)        
     
-    // Reset zelcash send progress and error message
+    // Reset zcash send progress and error message
     this.setProgressValue(1)
     this.setSendErrorMessage('')
 
@@ -751,7 +751,7 @@ class ZSendZEL extends React.Component {
           // If we don't have enough address
           // fail and tell user
           if (satoshisSoFar < satoshisToSend + satoshisfeesToSend){            
-            this.setSendErrorMessage('Not enough confirmed ZEL in account to perform transaction')
+            this.setSendErrorMessage('Not enough confirmed ZEC in account to perform transaction')
             this.setProgressValue(0)          
           }
 
@@ -762,9 +762,10 @@ class ZSendZEL extends React.Component {
             recipients = recipients.concat({address: senderAddress, satoshis: refundSatoshis})
           }
 
+          // TODO specify overwinter heights and tx constructions for the sake of completness
           var txHexString;
-          if (blockHeight >= 250000 || this.props.settings.useTestNet) {
-            var network = this.props.settings.useTestNet ? bitgotx.networks.zcashTest : bitgotx.networks.zelcash;
+          if (blockHeight >= 419200 || this.props.settings.useTestNet) {
+            var network = this.props.settings.useTestNet ? bitgotx.networks.zcashTest : bitgotx.networks.zcash;
             var maxFeeRate = satoshisfeesToSend;
             const txb = new bitgotx.TransactionBuilder(network, maxFeeRate);
             var lockTime = blockHeight - 420;
@@ -830,7 +831,7 @@ class ZSendZEL extends React.Component {
       var zelcashtx = zelcashwalletutils.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid
       zelcashTxLink = (
         <Alert color="success">
-        <strong><span className="send1">ZEL successfully sent!</span></strong> <a href={zelcashtx}><span className="send2">Click here to view your transaction</span></a>
+        <strong><span className="send1">ZEC successfully sent!</span></strong> <a href={zelcashtx}><span className="send2">Click here to view your transaction</span></a>
         </Alert>
       )      
     }
@@ -866,7 +867,7 @@ class ZSendZEL extends React.Component {
         <Col>
           <Card>
             <CardBlock>       
-              <Alert color="danger"><span className="send3">ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF ZEL FIRST</span></Alert>              
+              <Alert color="danger"><span className="send3">ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF ZEC FIRST</span></Alert>              
               <InputGroup>
                 <InputGroupAddon><span className="send4">From Address</span></InputGroupAddon>
                 <Input type="select" onChange={this.handleUpdateSelectedAddress}>
@@ -890,7 +891,7 @@ class ZSendZEL extends React.Component {
               <FormGroup check>
                 <Label check>
                   <Input onChange={this.handleCheckChanged} type="checkbox" />{' '}
-                  <span className="send8">Yes, I would like to send these ZEL</span>
+                  <span className="send8">Yes, I would like to send these ZEC</span>
                 </Label>
               </FormGroup> 
               <br/>                           
@@ -1029,7 +1030,7 @@ class ZWalletTabs extends React.Component {
     var now = new Date();
     now = now.toISOString().split('.')[0]+'Z';
 
-    var fileStr = '# Wallet dump created by myzelcash ' + pjson.version + '\n'
+    var fileStr = '# Wallet dump created by webwallet.zecmate.com ' + pjson.version + '\n'
     fileStr += '# Created on ' + now + '\n\n\n'
 
     Object.keys(this.props.publicAddresses).forEach(function(key) {
@@ -1039,7 +1040,7 @@ class ZWalletTabs extends React.Component {
     }.bind(this))
     
     const pkBlob = new Blob([fileStr], {type: 'text/plain;charset=utf-8'})
-    FileSaver.saveAs(pkBlob, now + '_myzelcash_private_keys.txt')
+    FileSaver.saveAs(pkBlob, now + '_zecmate_private_keys.txt')
   }
 
   render () {
@@ -1059,7 +1060,7 @@ class ZWalletTabs extends React.Component {
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => { this.toggleTabs('2'); }}
             >
-              <span className="menu2">Send ZEL</span>
+              <span className="menu2">Send ZEC</span>
             </NavLink>
           </NavItem>
           <NavItem>
@@ -1131,8 +1132,8 @@ export default class ZWallet extends React.Component {
         showSettings: false,
         showWalletGen: false,
         compressPubKey: true,
-        insightAPI: 'https://explorer.zel.cash/api',
-        explorerURL: 'https://explorer.zel.cash/',
+        insightAPI: 'https://explorer.zecmate.com/api',
+        explorerURL: 'https://explorer.zecmate.com/',
         useTestNet: false,
         unlockType: UNLOCK_WALLET_TYPE.HD_WALLET
       }
@@ -1265,12 +1266,12 @@ export default class ZWallet extends React.Component {
     _settings.useTestNet = !_settings.useTestNet
 
     if (_settings.useTestNet){
-        _settings.insightAPI = 'https://testnet.zel.cash/api'
-      _settings.explorerURL = 'https://testnet.zel.cash/'
+        _settings.insightAPI = 'https://explorer.testnet.z.cash/api'
+      _settings.explorerURL = 'https://explorer.testnet.z.cash/'
     }
     else{
-        _settings.insightAPI = 'https://explorer.zel.cash/api'
-        _settings.explorerURL = 'https://explorer.zel.cash/'
+        _settings.insightAPI = 'https://explorer.zecmate.com/api'
+        _settings.explorerURL = 'https://explorer.zecmate.com/'
     }
 
     this.setState({
@@ -1301,7 +1302,7 @@ export default class ZWallet extends React.Component {
       <Container>
         <Row>
           <Col>
-            <h1 className='display-6'><span className="main1">MyZelcash Wallet</span>&nbsp;
+            <h1 className='display-6'><span className="main1">ZECmate WebWallet</span>&nbsp;
               <ToolTipButton onClick={this.toggleShowSettings} id={1} buttonText={<MDSettings/>} tooltipText={'settings'}/>&nbsp;
               <ToolTipButton disabled={this.state.publicAddresses === null} onClick={this.resetKeys} id={2} buttonText={<FARepeat/>} tooltipText={'reset wallet'}/>
             </h1>

@@ -1,9 +1,9 @@
 {
-  "name": "myzelcash",
+  "name": "webwallet.zecmate.com",
   "version": "v2.1.0",
-  "description": "Secure Zelcash wallet online",
+  "description": "Secure Zcash wallet online",
   "main": "index.js",
-  "repository": "https://github.com/TheTrunk/myzelcash.git",
+  "repository": "https://github.com/ZECmate/webwallet.zecmate.com.git",
   "author": "TheTrunk",
   "license": "MIT",
   "scripts": {

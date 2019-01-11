@@ -1,8 +1,8 @@
-# MyZelcash wallet
+# ZECmate WebWallet
 
-MyZelcash wallet is a client-side browser-based wallet for Zelcash.
+ZECmate WebWallet is a client-side browser-based wallet for Zcash.
 
-Officially at: https://my.zel.cash
+Officially at: https://webwallet.zecmate.com
 
 
 # Running locally
