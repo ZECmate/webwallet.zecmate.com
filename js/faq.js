@@ -27762,7 +27762,7 @@ var ZNavbar = function (_React$Component) {
             _react2.default.createElement(
               _reactstrap.NavbarBrand,
               { className: 'style', href: '/' },
-              _react2.default.createElement('img', { src: './zelcashlogo.png', height: 50 })
+              _react2.default.createElement('img', { src: './zecmatelogo.png', height: 50 })
             ),
             _react2.default.createElement(
               _reactstrap.Collapse,
@@ -30892,40 +30892,19 @@ var ZFooter = function (_React$Component) {
                     _react2.default.createElement(
                       'b',
                       null,
-                      ' MY.ZEL.CASH'
+                      ' https://webwallet.zecmate.com'
                     )
                   ),
                   _react2.default.createElement(
                     'p',
                     { className: 'f2' },
                     'Keys are validated client-side and do not leave your browser or network. You are responsible for keeping your own keys safe!!!'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'f3' },
-                      'All donations goes directly to charity!'
-                    ),
-                    _react2.default.createElement(
-                      'a',
-                      { href: 'https://www.zel.cash/charity/', target: '_blank', 'data-toggle': 'tooltip', title: 'Zelcash Charity' },
-                      ' ',
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'f4' },
-                        'More about Zelcash charity'
-                      )
-                    ),
-                    _react2.default.createElement('br', null),
-                    _react2.default.createElement('br', null)
                   )
                 )
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
+                { href: 'https://zecmate.com', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
                 '  ',
                 _react2.default.createElement(_home2.default, { size: 28 }),
                 '  '
@@ -30939,35 +30918,14 @@ var ZFooter = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://twitter.com/Zelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Twitter' },
-                '  ',
-                _react2.default.createElement(_twitter2.default, { size: 28 }),
-                '  '
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://reddit.com/r/ZelCash', target: '_blank', 'data-toggle': 'tooltip', title: 'Reddit' },
-                '  ',
-                _react2.default.createElement(_redditAlien2.default, { size: 28 }),
-                '  '
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://bitcointalk.org/index.php?topic=2853688.0', target: '_blank', 'data-toggle': 'tooltip', title: 'Bitcoin Talk' },
-                '  ',
-                _react2.default.createElement(_bitcoin2.default, { size: 28 }),
-                '  '
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://github.com/TheTrunk/myzelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
+                { href: 'https://github.com/ZECmate/webwallet.zecmate.com', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
                 '  ',
                 _react2.default.createElement(_github2.default, { size: 28 }),
                 ' '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'mailto:info@zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'info@zel.cash' },
+                { href: 'mailto:tadeas.kmenta@zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'tadeas.kmenta@zel.cash' },
                 '  ',
                 _react2.default.createElement(_envelopeO2.default, { size: 28 }),
                 '  '
@@ -31716,7 +31674,7 @@ var ZFaq = function (_React$Component) {
               _react2.default.createElement(
                 'span',
                 { className: 'faq2b' },
-                'A: MyZelcash Wallet has replicated the core features of the Zelcash daemon in JavaScript! So the process of creating and signing the transactions are all done within the browser. No sensitive information is sent through the network.'
+                'A: ZECmate WebWallet has replicated the core features of the Zcash daemon in JavaScript! So the process of creating and signing the transactions are all done within the browser. No sensitive information is sent through the network.'
               )
             ),
             _react2.default.createElement(
@@ -31740,7 +31698,7 @@ var ZFaq = function (_React$Component) {
               ' ',
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/TheTrunk/myzelcash' },
+                { href: 'https://github.com/ZECmate/webwallet.zecmate.com' },
                 _react2.default.createElement(
                   'span',
                   { className: 'faq3c' },
@@ -31764,7 +31722,7 @@ var ZFaq = function (_React$Component) {
               _react2.default.createElement(
                 'span',
                 { className: 'faq4b' },
-                'A: MyZelcash Wallet was inspired by'
+                'A: ZECmate WebWallet was inspired by'
               ),
               ' ',
               _react2.default.createElement(
@@ -31796,7 +31754,7 @@ var ZFaq = function (_React$Component) {
               _react2.default.createElement(
                 'span',
                 { className: 'faq4f' },
-                'We also want to provide the people the ability to interact with the Zelcash blockchain easily, without having to run a full node.'
+                'We also want to provide the people the ability to interact with the Zcash blockchain easily, without having to run a full node.'
               )
             )
           )

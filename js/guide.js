@@ -27762,7 +27762,7 @@ var ZNavbar = function (_React$Component) {
             _react2.default.createElement(
               _reactstrap.NavbarBrand,
               { className: 'style', href: '/' },
-              _react2.default.createElement('img', { src: './zelcashlogo.png', height: 50 })
+              _react2.default.createElement('img', { src: './zecmatelogo.png', height: 50 })
             ),
             _react2.default.createElement(
               _reactstrap.Collapse,
@@ -30892,40 +30892,19 @@ var ZFooter = function (_React$Component) {
                     _react2.default.createElement(
                       'b',
                       null,
-                      ' MY.ZEL.CASH'
+                      ' https://webwallet.zecmate.com'
                     )
                   ),
                   _react2.default.createElement(
                     'p',
                     { className: 'f2' },
                     'Keys are validated client-side and do not leave your browser or network. You are responsible for keeping your own keys safe!!!'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'f3' },
-                      'All donations goes directly to charity!'
-                    ),
-                    _react2.default.createElement(
-                      'a',
-                      { href: 'https://www.zel.cash/charity/', target: '_blank', 'data-toggle': 'tooltip', title: 'Zelcash Charity' },
-                      ' ',
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'f4' },
-                        'More about Zelcash charity'
-                      )
-                    ),
-                    _react2.default.createElement('br', null),
-                    _react2.default.createElement('br', null)
                   )
                 )
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
+                { href: 'https://zecmate.com', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
                 '  ',
                 _react2.default.createElement(_home2.default, { size: 28 }),
                 '  '
@@ -30939,35 +30918,14 @@ var ZFooter = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://twitter.com/Zelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Twitter' },
-                '  ',
-                _react2.default.createElement(_twitter2.default, { size: 28 }),
-                '  '
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://reddit.com/r/ZelCash', target: '_blank', 'data-toggle': 'tooltip', title: 'Reddit' },
-                '  ',
-                _react2.default.createElement(_redditAlien2.default, { size: 28 }),
-                '  '
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://bitcointalk.org/index.php?topic=2853688.0', target: '_blank', 'data-toggle': 'tooltip', title: 'Bitcoin Talk' },
-                '  ',
-                _react2.default.createElement(_bitcoin2.default, { size: 28 }),
-                '  '
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: 'https://github.com/TheTrunk/myzelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
+                { href: 'https://github.com/ZECmate/webwallet.zecmate.com', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
                 '  ',
                 _react2.default.createElement(_github2.default, { size: 28 }),
                 ' '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'mailto:info@zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'info@zel.cash' },
+                { href: 'mailto:tadeas.kmenta@zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'tadeas.kmenta@zel.cash' },
                 '  ',
                 _react2.default.createElement(_envelopeO2.default, { size: 28 }),
                 '  '
@@ -31747,8 +31705,8 @@ var ZGuide = function (_React$Component) {
                 ' ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://my.zel.cash' },
-                  'https://my.zel.cash'
+                  { href: 'https://webwallet.zecmate.com' },
+                  'https://webwallet.zecmate.com'
                 )
               ),
               _react2.default.createElement(
@@ -31839,8 +31797,8 @@ var ZGuide = function (_React$Component) {
                 ' ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://my.zel.cash' },
-                  'https://my.zel.cash'
+                  { href: 'https://webwallet.zecmate.com' },
+                  'https://webwallet.zecmate.com'
                 ),
                 ' ',
                 _react2.default.createElement(
@@ -31957,6 +31915,28 @@ var ZGuide = function (_React$Component) {
                   'span',
                   { className: 'guide2o' },
                   'option, paste in your private key and click the Unlock Private Key button'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'h3',
+              null,
+              _react2.default.createElement(
+                'span',
+                { className: 'guide2a' },
+                '3. Using Copay'
+              )
+            ),
+            _react2.default.createElement(
+              'ul',
+              null,
+              _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  'span',
+                  { className: 'guide2b' },
+                  'Copay uses BIP44 wallet derivation paths.'
                 )
               )
             )
